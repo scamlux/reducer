@@ -6,11 +6,11 @@ function reducer(prevState: any, action: any) {
   switch (action) {
     case "+first":
       array = [...prevState];
-      array.unshift(Math.ceil(Math.random() * 100));
+      array.unshift(Math.floor(Math.random() * 100));
       return array;
     case "+last":
       array = [...prevState];
-      array.push(Math.ceil(Math.random() * 100));
+      array.push(Math.floor(Math.random() * 100));
       return array;
     case "-last":
       array = [...prevState];
@@ -63,6 +63,7 @@ const Simple: React.FC = () => {
           {state?.join(" - ")}
         </b>
       </p>
+      <a href="https://github.com/scamlux/reducer">Github</a>
     </>
   );
 };
