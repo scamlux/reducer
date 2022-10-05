@@ -31,7 +31,7 @@ function reducer(prevState: any, action: any) {
   }
 }
 
-const initialState = [0];
+const initialState: number[] = [0];
 const Simple: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
